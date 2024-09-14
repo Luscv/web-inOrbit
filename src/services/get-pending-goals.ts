@@ -6,7 +6,7 @@ type PendingGoalsResponse = {
 }[]
 
 export async function getWeekPendingGoals(): Promise<PendingGoalsResponse>{
-    const response = await fetch('http://localhost:3333/pending-goals')
+    const response = await fetch('https://inorbit-server-8mmb0kt49-luscvs-projects.vercel.app/pending-goals')
     const data = await response.json()
     return data.pendingGoals
 }
